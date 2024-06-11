@@ -12,24 +12,28 @@ async function checkShortCut(nickname, uid, usersData) {
 module.exports = {
 	config: {
 		name: "setname",
-		version: "1.5",
+		version: "1.3",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		description: {
-			vi: "Đổi biệt danh của tất cả thành viên trong nhóm chat hoặc những thành viên được tag theo một định dạng",
+		shortDescription: {
+			vi: "Äá»•i biá»‡t danh ",
+			en: "Change nickname"
+		},
+		longDescription: {
+			vi: "Äá»•i biá»‡t danh cá»§a táº¥t cáº£ thÃ nh viÃªn trong nhÃ³m chat hoáº·c nhá»¯ng thÃ nh viÃªn Ä‘Æ°á»£c tag theo má»™t Ä‘á»‹nh dáº¡ng",
 			en: "Change nickname of all members in chat or members tagged by a format"
 		},
 		category: "box chat",
 		guide: {
 			vi: {
-				body: "   {pn} <nick name>: thay đổi biệt danh của bản thân"
-					+ "\n   {pn} @tags <nick name>: thay đổi biệt danh của những thành viên được tag"
-					+ "\n   {pn} all <nick name>: thay đổi biệt danh của tất cả thành viên trong nhóm chat"
-					+ "\n\n   Với các shortcut có sẵn:"
-					+ "\n   + {userName}: tên của thành viên"
-					+ "\n   + {userID}: ID của thành viên"
-					+ "\n\n   Ví dụ: (xem ảnh)",
+				body: "   {pn} <nick name>: thay Ä‘á»•i biá»‡t danh cá»§a báº£n thÃ¢n"
+					+ "\n   {pn} @tags <nick name>: thay Ä‘á»•i biá»‡t danh cá»§a nhá»¯ng thÃ nh viÃªn Ä‘Æ°á»£c tag"
+					+ "\n   {pn} all <nick name>: thay Ä‘á»•i biá»‡t danh cá»§a táº¥t cáº£ thÃ nh viÃªn trong nhÃ³m chat"
+					+ "\n\n   Vá»›i cÃ¡c shortcut cÃ³ sáºµn:"
+					+ "\n   + {userName}: tÃªn cá»§a thÃ nh viÃªn"
+					+ "\n   + {userID}: ID cá»§a thÃ nh viÃªn"
+					+ "\n\n   VÃ­ dá»¥: (xem áº£nh)",
 				attachment: {
 					[`${__dirname}/assets/guide/setname_1.png`]: "https://i.ibb.co/gFh23zb/guide1.png",
 					[`${__dirname}/assets/guide/setname_2.png`]: "https://i.ibb.co/BNWHKgj/guide2.png"
@@ -53,7 +57,7 @@ module.exports = {
 
 	langs: {
 		vi: {
-			error: "Đã có lỗi xảy ra, thử tắt tính năng liên kết mời trong nhóm và thử lại sau"
+			error: "ÄÃ£ cÃ³ lá»—i xáº£y ra, thá»­ táº¯t tÃ­nh nÄƒng liÃªn káº¿t má»i trong nhÃ³m vÃ  thá»­ láº¡i sau"
 		},
 		en: {
 			error: "An error has occurred, try turning off the invite link feature in the group and try again later"
@@ -71,12 +75,7 @@ module.exports = {
 		}
 		else if (mentions.length) {
 			uids = mentions;
-			const allName = new RegExp(
-				Object.values(event.mentions)
-					.map(name => name.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")) // fix error when name has special characters
-					.join("|")
-				, "g"
-			);
+			const allName = new RegExp(Object.values(event.mentions).join("|"), "g");
 			nickname = nickname.replace(allName, "").trim();
 		}
 		else {
