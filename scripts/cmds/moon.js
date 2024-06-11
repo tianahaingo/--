@@ -12,18 +12,22 @@ const { getStreamFromURL } = global.utils;
 module.exports = {
 	config: {
 		name: "moon",
-		version: "1.4",
+		version: "1.3",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		description: {
-			vi: "xem ảnh mặt trăng vào đêm bạn chọn (dd/mm/yyyy)",
+		shortDescription: {
+			vi: "xem áº£nh máº·t trÄƒng",
+			en: "view moon image"
+		},
+		longDescription: {
+			vi: "xem áº£nh máº·t trÄƒng vÃ o Ä‘Ãªm báº¡n chá»n (dd/mm/yyyy)",
 			en: "view moon image on the night you choose (dd/mm/yyyy)"
 		},
 		category: "image",
 		guide: {
-			vi: "  {pn} <ngày/tháng/năm>"
-				+ "\n   {pn} <ngày/tháng/năm> <caption>",
+			vi: "  {pn} <ngÃ y/thÃ¡ng/nÄƒm>"
+				+ "\n   {pn} <ngÃ y/thÃ¡ng/nÄƒm> <caption>",
 			en: "  {pn} <day/month/year>"
 				+ "\n   {pn} <day/month/year> <caption>"
 		}
@@ -31,10 +35,10 @@ module.exports = {
 
 	langs: {
 		vi: {
-			invalidDateFormat: "Vui lòng nhập ngày/tháng/năm hợp lệ theo định dạng DD/MM/YYYY",
-			error: "Đã xảy ra lỗi không thể lấy ảnh mặt trăng của ngày %1",
-			invalidDate: "Ngày %1 không hợp lệ",
-			caption: "- Ảnh mặt trăng vào đêm %1"
+			invalidDateFormat: "Vui lÃ²ng nháº­p ngÃ y/thÃ¡ng/nÄƒm há»£p lá»‡ theo Ä‘á»‹nh dáº¡ng DD/MM/YYYY",
+			error: "ÄÃ£ xáº£y ra lá»—i khÃ´ng thá»ƒ láº¥y áº£nh máº·t trÄƒng cá»§a ngÃ y %1",
+			invalidDate: "NgÃ y %1 khÃ´ng há»£p lá»‡",
+			caption: "- áº¢nh máº·t trÄƒng vÃ o Ä‘Ãªm %1"
 		},
 		en: {
 			invalidDateFormat: "Please enter a valid date in DD/MM/YYYY format",

@@ -4,12 +4,16 @@ module.exports = {
 	config: {
 		name: "loadconfig",
 		aliases: ["loadcf"],
-		version: "1.4",
+		version: "1.3",
 		author: "NTKhang",
 		countDown: 5,
 		role: 2,
-		description: {
-			vi: "Load lại config của bot",
+		shortDescription: {
+			vi: "Load láº¡i config",
+			en: "Reload config"
+		},
+		longDescription: {
+			vi: "Load láº¡i config cá»§a bot",
 			en: "Reload config of bot"
 		},
 		category: "owner",
@@ -18,7 +22,7 @@ module.exports = {
 
 	langs: {
 		vi: {
-			success: "Config đã được load lại thành công"
+			success: "Config Ä‘Ã£ Ä‘Æ°á»£c load láº¡i thÃ nh cÃ´ng"
 		},
 		en: {
 			success: "Config has been reloaded successfully"
