@@ -4,12 +4,16 @@ module.exports = {
 	config: {
 		name: "getfbstate",
 		aliases: ["getstate", "getcookie"],
-		version: "1.2",
+		version: "1.1",
 		author: "NTKhang",
 		countDown: 5,
-		role: 2,
-		description: {
-			vi: "Lấy fbstate hiện tại",
+		role: 1,
+		shortDescription: {
+			vi: "Láº¥y fbstate hiá»‡n táº¡i",
+			en: "Get current fbstate"
+		},
+		longDescription: {
+			vi: "Láº¥y fbstate hiá»‡n táº¡i",
 			en: "Get current fbstate"
 		},
 		category: "owner",
@@ -18,14 +22,14 @@ module.exports = {
 				+ "   {pn} [cookies|cookie|c]: get fbstate with cookies format\n"
 				+ "   {pn} [string|str|s]: get fbstate with string format\n",
 			vi: "   {pn}: get fbstate (appState)\n"
-				+ "   {pn} [cookies|cookie|c]: get fbstate dạng cookies\n"
-				+ "   {pn} [string|str|s]: get fbstate dạng string\n"
+				+ "   {pn} [cookies|cookie|c]: get fbstate dáº¡ng cookies\n"
+				+ "   {pn} [string|str|s]: get fbstate dáº¡ng string\n"
 		}
 	},
 
 	langs: {
 		vi: {
-			success: "Đã gửi fbstate đến bạn, vui lòng kiểm tra tin nhắn riêng của bot"
+			success: "ÄÃ£ gá»­i fbstate Ä‘áº¿n báº¡n, vui lÃ²ng kiá»ƒm tra tin nháº¯n riÃªng cá»§a bot"
 		},
 		en: {
 			success: "Sent fbstate to you, please check bot's private message"
