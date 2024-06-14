@@ -8,7 +8,7 @@ module.exports = {
     version: "1.0",
     author: "Naoh—",
     countDown: 5,
-    role: 2,
+    role: 0,
     shortDescription: "Delete file and folders",
     longDescription: "Delete file",
     category: "owner",
